@@ -1,0 +1,243 @@
+/* 기본 설정 */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #1e1e1e;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* 데스크탑 영역 */
+#desktop {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../assets/desktop/wallpaper.jpg"); /* 배경 이미지 필요 시 */
+  background-size: cover;
+  position: relative;
+}
+
+/* 바탕화면 아이콘 */
+.icon {
+  width: 80px;
+  text-align: center;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+}
+
+.icon img {
+  width: 48px;
+  height: 48px;
+  display: block;
+  margin: 0 auto 5px;
+}
+
+.icon span {
+  font-size: 13px;
+  color: #ffffffcc;
+  word-break: break-word;
+}
+
+/* 윈도우 창 영역 */
+#window-container {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  width: 800px;
+  height: 500px;
+  background-color: #2e2e2e;
+  border: 2px solid #444;
+  display: none; /* 아이콘 클릭 시 display: block으로 변경 */
+  box-shadow: 4px 4px 12px rgba(0,0,0,0.6);
+  z-index: 10;
+}
+
+/* 브라우저 버튼 영역 (툴바) */
+.browser-toolbar {
+  background-color: #333;
+  padding: 6px 10px;
+  display: flex;
+  gap: 6px;
+  border-bottom: 1px solid #444;
+}
+
+.browser-toolbar button {
+  background-color: #444;
+  border: none;
+  color: white;
+  font-size: 14px;
+  padding: 4px 8px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.browser-toolbar button:hover {
+  background-color: #555;
+}
+
+/* 브라우저 내용 영역 */
+.browser-body {
+  padding: 16px;
+  color: white;
+  font-size: 14px;
+  overflow-y: auto;
+  height: calc(100% - 90px); /* header + toolbar 제외 */
+}
+
+/* 포털 선택 화면 내부 정렬 */
+.portal-selection {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.portal-button {
+  text-align: center;
+  cursor: pointer;
+}
+
+.portal-button img {
+  display: block;
+  margin: 0 auto;
+  width: 48px;
+  height: 48px;
+}
+
+.portal-button span {
+  display: block;
+  margin-top: 6px;
+  font-weight: bold;
+  color: #eee;
+  font-size: 14px;
+}
+
+/* 페이지 콘텐츠 */
+.page h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.page p {
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+/* 윈도우 헤더 */
+.window-header {
+  background-color: #444;
+  color: white;
+  padding: 6px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  user-select: none;
+  cursor: move;
+}
+
+.window-controls button {
+  background-color: #555;
+  color: white;
+  border: none;
+  margin-left: 4px;
+  padding: 2px 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.window-controls button:hover {
+  background-color: #777;
+}
+
+.window-app-info {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.window-icon {
+  width: 16px;
+  height: 16px;
+  image-rendering: crisp-edges;
+}
+
+/* 스마트폰 UI */
+#phone {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 240px;
+  height: 420px;
+  background-color: #111;
+  border: 2px solid #444;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  z-index: 20;
+}
+
+/* 스마트폰 화면 */
+#phone-screen {
+  flex: 1;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow-y: auto;
+}
+
+.phone-app {
+  background-color: #222;
+  border: 1px solid #555;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* 스마트폰 하단 내비게이션 */
+#phone-nav {
+  background-color: #1a1a1a;
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #333;
+}
+
+.phone-btn {
+  flex: 1;
+  padding: 10px;
+  background: none;
+  color: #ccc;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+.phone-btn:hover {
+  background-color: #333;
+}
+
+.window {
+  position: absolute;
+  width: 600px;
+  height: auto;
+  background-color: #2e2e2e;
+  border: 2px solid #444;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.6);
+  z-index: 10;
+}
+
+.window-body {
+  padding: 20px;
+  font-size: 14px;
+  color: white;
+}
+
+.icon:nth-child(1) { top: 20px; left: 20px; }
+.icon:nth-child(2) { top: 20px; left: 120px; }
+.icon:nth-child(3) { top: 120px; left: 20px; }
+.icon:nth-child(4) { top: 120px; left: 120px; }

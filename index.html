@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SuperSafe - 공동인증서 시뮬레이터</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="desktop">
+    <!-- 바탕화면 아이콘 -->
+    <div class="icon" data-app="cronix">
+        <img src="assets/icons/icon-browser-cronix.png" alt="Cronix Browser" />
+        <span>Cronix</span>
+    </div>
+
+    <div class="icon" data-app="uson">
+        <img src="assets/icons/icon-browser-uson.png" alt="Uson Browser" />
+        <span>Uson</span>
+    </div>
+
+    <!-- 데스크탑 윈도우 -->
+    <div id="window-container"></div>
+  </div>
+
+  <!-- 스마트폰 UI -->
+  <div id="phone">
+    <div id="phone-screen">
+      <div class="phone-app" id="ars-app">📞 ARS 전화</div>
+      <div class="phone-app" id="mail-app">📧 Dorana 메일</div>
+      <div class="phone-app" id="gallery-app">🖼️ 갤러리</div>
+    </div>
+    <div id="phone-nav">
+      <button class="phone-btn" data-target="ars-app">전화</button>
+      <button class="phone-btn" data-target="mail-app">메일</button>
+      <button class="phone-btn" data-target="gallery-app">사진</button>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
